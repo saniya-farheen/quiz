@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Round 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1, h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .team-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .start-contest {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        .start-contest:hover {
+            background-color: #0056b3;
+        }
+        .instructions {
+            margin-top: 40px;
+            text-align: left;
+        }
+        .instructions p {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .logout-form {
+            margin-top: 20px;
+            text-align: right;
+        }
+        .logout-btn {
+            padding: 8px 16px;
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .logout-btn:hover {
+            background-color: #c82333;
+        }
+        .timer {
+            font-size: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logout-form">
+            <form action="/logout1" method="POST">
+                <button class="logout-btn" type="submit">Logout</button>
+            </form>
+        </div>
+        <h1>Welcome to Round 1</h1>
+        <h3>We wish you the best of luck!</h3>
+        <div class="team-name">{{ team_name }}</div>
+        
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <p>1. You will have a limited time to complete the quiz.</p>
+            <p>2. Read each question carefully and select the correct answer.</p>
+            <p>3. Once you start the quiz, make sure to complete it without refreshing the page.</p>
+            <p>4. Click the "Start Quiz" button below to begin.</p>
+        </div>
+
+        <!-- Timer to show when the test starts -->
+        <div class="timer" id="timer"></div>
+
+        <div class="checkbox-container">
+            <!-- Checkbox for terms and conditions -->
+            <input type="checkbox" id="agree-checkbox"> I have read and understood the instructions.
+        </div>
+        
+        <!-- Button to start the quiz -->
+        <button id="start-quiz-btn" class="start-contest" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <script>
+        console.log("{{ start_time }}")
+        // Function to start the quiz
+        function startQuiz() {
+            // Check if the checkbox is checked
+            if (document.getElementById('agree-checkbox').checked) {
+                // Redirect to the quiz page
+                window.location.href = '/quiz';
+            } else {
+                // Display a popup to agree to terms and conditions
+                alert('Please read and understand the instructions before starting the quiz.');
+            }
+        }
+        document.getElementById("start-quiz-btn").disabled = true;
+
+        // Calculate and display the time remaining until the test starts
+        function calculateTimeRemaining() {
+            // Get the current time and the start time of the test
+            var startTime = new Date("{{ start_time }}");
+            var currentTime = new Date();
+            
+            // Calculate the time difference in milliseconds
+            var timeDifference = startTime - currentTime;
+            
+            // If the time is up, enable the Start Quiz button
+            if (timeDifference <= 0) {
+                document.getElementById("timer").style.color = "green";
+                document.getElementById("timer").innerHTML = "Test has started!";
+                document.getElementById("start-quiz-btn").disabled = false;
+                // Optionally, you can redirect to the quiz page here as well
+                return; // Stop further execution
+            }
+            
+            // Calculate the minutes and seconds remaining
+            var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        
+            // Display the time remaining
+            document.getElementById("timer").innerHTML = "Test starts in " + minutes + " minutes and " + seconds + " seconds";
+        }
+        
+    
+        // Call the function to start calculating the time remaining
+        calculateTimeRemaining();
+        
+
+        // Call the function to calculate and display the time remaining every second
+        setInterval(calculateTimeRemaining, 1000);
+    </script>
+</body>
+</html>

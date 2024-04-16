@@ -1,0 +1,209 @@
+{
+    "questions": [
+      {
+        "question": "What is the main goal of penetration testing?",
+        "options": [
+        "To assess the effectiveness of security controls",
+        "To monitor network traffic for suspicious activity",
+        "To develop new security technologies",
+        "To recover lost data"
+        ],
+        "solution": "To assess the effectiveness of security controls"
+        },
+        {
+          "question": "Which type of malware is designed to block access to a computer system until a sum of money is paid?",
+          "options": [
+          "Virus",
+          "Worm",
+          "Trojan horse",
+          "Ransomware"
+          ],
+          "solution": "Ransomware"
+          },
+          {
+            "question": "What is the purpose of the Address Resolution Protocol (ARP) in networking?",
+            "options": [
+            "To translate domain names to IP addresses",
+            "To map IP addresses to MAC addresses",
+            "To establish a connection between devices on a network",
+            "To encrypt data transmissions"
+            ],
+            "solution": "To map IP addresses to MAC addresses"
+          },
+          {
+            "question": "In the context of networking, what advantage does subnetting offer in terms of network management?",
+            "options": [
+            "Subnetting allows for the efficient allocation of IP addresses and reduces network congestion.",
+            "Subnetting ensures that all devices on the same network segment have identical configurations.",
+            "Subnetting enables the use of multicast communication for broadcasting messages to multiple hosts.",
+            "Subnetting improves network security by isolating different departments within an organization."
+            ],
+            "solution": "Subnetting allows for the efficient allocation of IP addresses and reduces network congestion."
+            },
+            {
+              "question": "Which type of network attack involves flooding a network or server with excessive requests to disrupt its normal operation?",
+              "options": [
+              "Phishing",
+              "Denial of Service (DoS)",
+              "Man-in-the-Middle (MitM)",
+              "Spoofing"
+              ],
+              "solution": "Denial of Service (DoS)"
+              },
+              {
+                "question": "Which security measure is essential for protecting against phishing attacks?",
+                "options": [
+                "Two-factor authentication",
+                "Firewall configuration",
+                "Intrusion detection system",
+                "Data encryption"
+                ],
+                "solution": "Two-factor authentication"
+                },
+                {
+                  "question": "In which type of learning does the model learn from its mistakes and update its parameters accordingly?",
+                  "options": [
+                  "Supervised learning",
+                  "Unsupervised learning",
+                  "Reinforcement learning",
+                  "Semi-supervised learning"
+                  ],
+                  "solution": "Reinforcement learning"
+                },
+                {
+                    "question": "In the context of machine learning, what is the primary objective of feature scaling?",
+                    "options": [
+                    "To reduce the dimensionality of the dataset",
+                    "To standardize the range of features to a similar scale",
+                    "To introduce additional features for better model performance",
+                    "To randomly shuffle the order of feature vectors"
+                    ],
+                    "solution": "To standardize the range of features to a similar scale"
+                  },
+                  {
+                    "question": "In the context of a binary tree, what is the height of a tree with n nodes?",
+                    "options": [
+                    "n",
+                    "log n",
+                    "log(n + 1)",
+                    "n - 1"
+                    ],
+                    "solution": "log n"
+                    },
+                    {
+                      "question": "Which sorting algorithm is not stable?",
+                      "options": [
+                      "Merge Sort",
+                      "Quick Sort",
+                      "Bubble Sort",
+                      "Insertion Sort"
+                      ],
+                      "solution": "Quick Sort"
+                      },
+                      {
+                        "question": "Which of the following is NOT a characteristic of NoSQL databases?",
+                        "options": [
+                        "ACID transactions",
+                        "Schema-less design",
+                        "Horizontal scalability",
+                        "Distributed architecture"
+                        ],
+                        "solution": "ACID transactions"
+                        },
+                        {
+                          "question": "Which of the following is not a property of a transaction in a DBMS?",
+                          "options": [
+                          "Atomicity",
+                          "Consistency",
+                          "Isolation",
+                          "Durability"
+                          ],
+                          "solution": "Isolation"
+                          },
+                          {
+                            "question": "A company wants to deploy a web application that can handle sudden spikes in user traffic efficiently without incurring high infrastructure costs. Which cloud computing service would be most suitable for this requirement?",
+                            "options": [
+                            "Infrastructure as a Service (IaaS)",
+                            "Platform as a Service (PaaS)",
+                            "Serverless Computing",
+                            "Software as a Service (SaaS)"
+                            ],
+                            "solution": "Serverless Computing"
+                            },
+                            {
+                              "question": "What is the purpose of auto-scaling in cloud computing?",
+                              "options": [
+                              "To automatically adjust the size of virtual machines based on demand",
+                              "To automatically deploy new instances of an application",
+                              "To automatically encrypt data stored in the cloud",
+                              "To automatically update software versions"
+                              ],
+                              "solution": "To automatically adjust the size of virtual machines based on demand"
+                              },
+                              {
+                                "question": "What is the purpose of digital twins in IoT?",
+                                "options": [
+                                "To create virtual replicas of physical devices for testing purposes",
+                                "To simulate real-world scenarios and predict outcomes",
+                                "To optimize resource utilization and minimize downtime",
+                                "To enable remote monitoring and control of physical assets"
+                                ],
+                                "solution": "To create virtual replicas of physical devices for testing purposes"
+                                },
+                                {
+                                  "question": "Which of the following scenarios best demonstrates the application of edge computing in IoT?",
+                                  "options": [
+                                  "Analysing sensor data in real-time at the device level to make immediate adjustments.",
+                                  "Storing all IoT data in a centralized cloud server for long-term analysis.",
+                                  "Utilizing a peer-to-peer network for communication between IoT devices.",
+                                  "Implementing blockchain technology to secure IoT data transactions."
+                                  ],
+                                  "solution": "Analysing sensor data in real-time at the device level to make immediate adjustments."
+                                  },
+                                  {
+                                    "question": "Which recent development in computer vision has enabled machines to understand and interpret visual information more effectively?",
+                                    "options": [
+                                    "Generative Adversarial Networks (GANs)",
+                                    "Convolutional Neural Networks (CNNs)",
+                                    "Recurrent Neural Networks (RNNs)",
+                                    "Long Short-Term Memory (LSTM) networks"
+                                    ],
+                                    "solution": "Convolutional Neural Networks (CNNs)"
+                                   },
+                                   {
+                                    "question": "Which of the following best describes the purpose of the CPU cache?",
+                                    "options": [
+                                    "To store frequently accessed instructions and data for faster processing",
+                                    "To store the operating system files permanently",
+                                    "To provide additional storage space for secondary storage devices",
+                                    "To facilitate communication between the CPU and RAM"
+                                    ],
+                                    "solution": "To store frequently accessed instructions and data for faster processing"
+                                    },
+                                    {
+                                      "question": "Which of the following is NOT a type of parallelism commonly found in modern CPUs?",
+                                      "options": [
+                                      "Instruction-level parallelism",
+                                      "Thread-level parallelism",
+                                      "Task-level parallelism",
+                                      "Network-level parallelism"
+                                      ],
+                                      "solution": "Network-level parallelism"
+                                      },
+                                      {
+                                        "question": "Which software development methodology emphasizes the importance of self-organizing cross-functional teams and frequent customer collaboration?",
+                                        "options": [
+                                        "Waterfall",
+                                        "Spiral",
+                                        "Agile",
+                                        "Prototype"
+                                        ],
+                                        "solution": "Agile"
+                                        }
+                                    
+
+                                
+
+    ]
+  }
+  
